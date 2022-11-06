@@ -11,7 +11,12 @@ const onFormSubmit = (event) => {
     return alert("Є незаповненні поля)");
   }
   const formData = new FormData(event.currentTarget);
-  formData.forEach((value, name) => console.log(name, value));
+
+  const infoData = {};
+  for (let key of formData) {
+    infoData[key] = key;
+  }
+  console.log(infoData);
 
   event.currentTarget.reset();
 };

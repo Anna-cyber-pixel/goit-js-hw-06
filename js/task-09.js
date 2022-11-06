@@ -9,8 +9,8 @@ const refs = {
 };
 
 const onColorBodyChange = () => {
-  refs.colorEl.textContent = getRandomHexColor();
   refs.body.style.backgroundColor = getRandomHexColor();
+  refs.colorEl.textContent = refs.body.style.backgroundColor;
 };
 
 refs.changeColorEl.addEventListener("click", onColorBodyChange);
